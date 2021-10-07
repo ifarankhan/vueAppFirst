@@ -1,0 +1,34 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue JS</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <style>
+      .box{
+        padding: 100px 0;
+        width: 400px;
+        text-align: center;
+        background-color: rgb(150, 161, 161);
+        margin: 20px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello Vsue :)</h1>
+    <div id="app">
+      <h2>{{ title }}</h2>
+      <small>Written by: {{ author }}</small>
+      <p>{{ article }}</p>
+      <small>Age: {{ age }}</small>
+      <br>
+      <div class="box" @mouseover="handleEvent($event , 5) "></div>
+      <div class="box" @mouseleave="handleEvent"></div>
+      <div class="box" @dblclick="handleEvent"></div>
+      <div class="box" @mousemove="handleMouseMove">position - x:{{x}} and y:{{y}}</div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

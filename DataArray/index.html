@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue JS</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <style>
+      .box{
+        padding: 100px 0;
+        width: 400px;
+        text-align: center;
+        background-color: rgb(150, 161, 161);
+        margin: 20px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello Vsue :)</h1>
+    <div id="app">
+      <div v-if="Books">
+        <ul>
+          <li v-for="(book, index) in Books" :key="index">
+            <h1>{{book.title}} - {{index}}</h1>
+            <small>{{book.author}}</small>
+            <p>{{book.article}}</p>
+            <p v-if="book.url"><a :href="book.url">View website</a></p>
+            <img v-if="book.images" :src="book.images" :alt="book.title">
+            <br>
+            <small>{{book.age}}</small>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
