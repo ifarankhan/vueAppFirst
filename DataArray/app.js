@@ -11,7 +11,8 @@ const app = Vue.createApp({
                 author: 'Faran K',
                 article: 'Multilingual writers often find article usage to be one of the most difficult concepts to learn. Although there are some rules about article usage to help, there are also quite a few exceptions. Therefore, learning to use articles accurately takes a long time. To master article usage, it is necessary to do a great deal of reading, notice how articles are used in published texts, and take notes that can apply back to your own writing.',
                 age: 30,
-                images:"../assets/1.jpg"
+                images:"../assets/1.jpg",
+                fav:true
             },
             {
                 title:'The age of Christanity',
@@ -19,14 +20,16 @@ const app = Vue.createApp({
                 article: 'Multilingual writers often find article usage to be one of the most difficult concepts to learn. Although there are some rules about article usage to help, there are also quite a few exceptions. Therefore, learning to use articles accurately takes a long time. To master article usage, it is necessary to do a great deal of reading, notice how articles are used in published texts, and take notes that can apply back to your own writing.',
                 age: 40,
                 url:"https://www.google.com/",
-                images:"../assets/2.jpg"
+                images:"../assets/2.jpg",
+                fav:false
             },
             {
                 title:'The age of Judaisam',
                 author: 'Eldar baror',
                 article: 'Multilingual writers often find article usage to be one of the most difficult concepts to learn. Although there are some rules about article usage to help, there are also quite a few exceptions. Therefore, learning to use articles accurately takes a long time. To master article usage, it is necessary to do a great deal of reading, notice how articles are used in published texts, and take notes that can apply back to your own writing.',
                 age: 29,
-                images:"../assets/3.jpg"
+                images:"../assets/3.jpg",
+                fav:true
             },
             {
                 title:'The age of Hinduisam',

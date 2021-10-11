@@ -42,6 +42,8 @@
             v-for="(book, index) in Books"
             :key="index"
             :class="{fav: book.fav}"
+            v-on:dblclick="handleToggleFav(index,book.fav)"
+            @click="handleFavToggle(book)"
           >
             <h1>{{book.title}} - {{index}}</h1>
             <small>{{book.author}}</small>
