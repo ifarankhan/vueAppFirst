@@ -1,0 +1,61 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue JS</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <style>
+      body {
+        background: #eee;
+        max-width: 960px;
+        margin: 20px auto;
+      }
+      p,
+      h3,
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style-type: none;
+        background: #fff;
+        margin: 20px auto;
+        padding: 10px 20px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      li.fav {
+        background: #6c96e2;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello Vsue :)</h1>
+    <div id="app">
+      <div v-if="Books">
+        <ul>
+          <li
+            v-for="(book, index) in filterBooks"
+            :key="index"
+            :class="{fav: book.fav}"
+            v-on:dblclick="handleToggleFav(index,book.fav)"
+            @click="handleFavToggle(book)"
+          >
+            <h1>{{book.title}} - {{index}}</h1>
+            <small>{{book.author}}</small>
+            <p>{{book.article}}</p>
+            <p v-if="book.url"><a :href="book.url">View website</a></p>
+            <img v-if="book.images" :src="book.images" :alt="book.title" />
+            <br />
+            <small>{{book.age}}</small>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
